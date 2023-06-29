@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+body {
+    font-family: "Montserrat";
+    margin: 0;
+    width: 100%;
+    color: #252525;
+}
+
+
+/* NavBar */
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    height: 70px;
+    padding: 10px 20px;
+    box-shadow: 0 0 10px #0005;
+    box-sizing: border-box;
+    z-index: 100;
+}
+
+#menu-links {
+    display: none;
+}
+
+#logo {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+#logo img {
+    width: 50px;
+    height: 50px;
+}
+
+#search-bar i {
+    position: absolute;
+    transform: translate(-140%, 50%);
+    cursor: pointer
+}
+
+#search-bar input {
+    width: 200px;
+    background-color: #eee;
+    border: none;
+    border-radius: 5px;
+    padding: 6px;
+    font-size: 16px;
+    outline: none;
+    transition: 0.3s all;
+}
+
+#links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+#links a {
+    text-decoration: none;
+    color: #252525;
+    transition: 0.2s all;
+}
+
+#links a:hover {
+    color: #EA9937;
+}
+
+#links li {
+    list-style: none;
+}
+
+#mobile-burger-menu {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    /* NavBar */
+    #links {
+        display: none;
+    }
+    #search-bar {
+        display: none;
+    }
+    #logo {
+        font-size: 16px;
+    }
+    #menu-links {
+        display: block;
+        position: absolute;
+        top: 0px;
+        padding-top: 70px;
+        background-color: #fff;
+        max-height: 0;
+        width: 100%;
+        transition: 0.3s all;
+        overflow: hidden;
+        z-index: 10;
+    }
+    #menu-links li {
+        text-align: right;
+        margin: 20px;
+        list-style: none;
+    }
+    #menu-links a {
+        text-decoration: none;
+        color: #000;
+        font-weight: 500;
+    }
+    #mobile-burger-menu {
+        display: block;
+    }
+    #check {
+        display: none;
+    }
+    #burger-menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        width: 45px;
+        height: 45px;
+        background-color: #ccc;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    #burger-menu span {
+        display: block;
+        width: 34px;
+        height: 3px;
+        border-radius: 30px;
+        background-color: #000;
+        transition: 0.3s all;
+    }
+    #check:checked~#burger-menu span:nth-child(1) {
+        transform: rotate(45deg) translate(8px, 8px);
+    }
+    #check:checked~#burger-menu span:nth-child(2) {
+        opacity: 0;
+    }
+    #check:checked~#burger-menu span:nth-child(3) {
+        transform: rotate(-45deg) translate(8px, -8px);
+    }
+}
+
+
+/* Estilo del botón */
+
+
+/* .boton {
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease 0s;
+}
+
+.version-1 {
+    background-color: #2196F3;
+}
+
+.version-2 {
+    background-color: #4CAF50;
+}
+
+.version-3 {
+    background-color: #f06292;
+} */
